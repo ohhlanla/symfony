@@ -14,4 +14,15 @@
     <route id="blog_show" path="/blog/{slug}">
         <default key="_controller">AppBundle:Blog:show</default>
     </route>
+	
+	<route id="article_show"
+        path="/articles/{_locale}/{year}/{slug}.{_format}">
+
+        <default key="_controller">AppBundle:Article:show</default>
+        <default key="_format">html</default>
+        <requirement key="_locale">en|fr</requirement>
+        <requirement key="_format">html|rss</requirement>
+        <requirement key="year">\d+</requirement>
+
+    </route>
 </routes>
