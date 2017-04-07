@@ -7,6 +7,7 @@
 
      <route id="blog_list" path="/blog/{page}">
         <default key="_controller">AppBundle:Blog:list</default>
+		<default key="page">1</default>
         <requirement key="page">\d+</requirement>
     </route>
 

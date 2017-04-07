@@ -12,7 +12,7 @@ class BlogController extends Controller
      *
      * @Route("/blog/{page}", name="blog_list", requirements={"page": "\d+"})
      */
-    public function listAction($page)
+    public function listAction($page=1)
     {
 		$text = $page;
 		

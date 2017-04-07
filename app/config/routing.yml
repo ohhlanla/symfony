@@ -4,7 +4,7 @@ app:
 
 blog_list:
     path:      /blog/{page}
-    defaults:  { _controller: AppBundle:Blog:list }
+    defaults:  { _controller: AppBundle:Blog:list, page: 1 }
     requirements:
         page: '\d+'
 
