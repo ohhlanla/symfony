@@ -10,11 +10,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class LuckyController extends Controller
 {
     /**
-     * @Route("/lucky/mynumber")
+     * @Route("/lucky/mynumber/{max}")
      */
-    public function numberAction()
+    public function numberAction($max)
     {
-        $number = mt_rand(0, 100);
+        $number = mt_rand(0, $max);
 
          return $this->render('lucky/number.html.twig', array(
             'number' => $number,
