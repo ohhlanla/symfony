@@ -30,7 +30,9 @@ class BlogController extends Controller
     {
         // $slug will equal the dynamic part of the URL
         // e.g. at /blog/yay-routing, then $slug='yay-routing'
-
-        // ...
+		
+        return $this->render('blog/blog.html.twig', array(
+            'number' => $slug,
+        ));
     }
 }
