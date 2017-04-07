@@ -10,11 +10,11 @@ class BlogController extends Controller
     /**
      * Matches /blog exactly
      *
-     * @Route("/blog", name="blog_list")
+     * @Route("/blog/{page}", name="blog_list", requirements={"page": "\d+"})
      */
-    public function listAction()
+    public function listAction($page)
     {
-		$text = "AXO";
+		$text = $page;
 		
         return $this->render('blog/blog.html.twig', array(
             'number' => $text,

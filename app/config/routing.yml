@@ -3,8 +3,10 @@ app:
     type: annotation
 
 blog_list:
-    path:      /blog
+    path:      /blog/{page}
     defaults:  { _controller: AppBundle:Blog:list }
+    requirements:
+        page: '\d+'
 
 blog_show:
     path:      /blog/{slug}

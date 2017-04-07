@@ -5,8 +5,9 @@
     xsi:schemaLocation="http://symfony.com/schema/routing
         http://symfony.com/schema/routing/routing-1.0.xsd">
 
-    <route id="blog_list" path="/blog">
+     <route id="blog_list" path="/blog/{page}">
         <default key="_controller">AppBundle:Blog:list</default>
+        <requirement key="page">\d+</requirement>
     </route>
 
     <route id="blog_show" path="/blog/{slug}">
