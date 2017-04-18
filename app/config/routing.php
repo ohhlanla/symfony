@@ -14,7 +14,6 @@ array(
 
 ));
 
-
 $collection->add('blog_show', new Route('/blog/{slug}', array(
     '_controller' => 'AppBundle:Blog:show',
 )));
@@ -30,5 +29,11 @@ $collection->add(
         'year'    => '\d+',
     ))
 );
+
+$collection->add('redirect_show', new Route('/redit', 
+array(
+    '_controller' => 'AppBundle:Redirect:show',
+)
+));
 
 return $collection;

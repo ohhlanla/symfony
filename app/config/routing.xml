@@ -10,6 +10,10 @@
 		<default key="page">1</default>
         <requirement key="page">\d+</requirement>
     </route>
+	
+	<route id="redirect_show" path="/redit">
+        <default key="_controller">AppBundle:Redirect:show</default>
+    </route>
 
     <route id="blog_show" path="/blog/{slug}">
         <default key="_controller">AppBundle:Blog:show</default>

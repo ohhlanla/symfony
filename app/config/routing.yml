@@ -7,15 +7,17 @@ blog_list:
     defaults:  { _controller: AppBundle:Blog:list, page: 1 }
     requirements:
         page: '\d+'
-
 blog_show:
     path:      /blog/{slug}
     defaults:  { _controller: AppBundle:Blog:show }
-
+redirect_show:
+    path:      /redit
+    defaults:  { _controller: AppBundle:Redirect:show }	
 article_show:
   path:     /articles/{_locale}/{year}/{slug}.{_format}
   defaults: { _controller: AppBundle:Article:show, _format: html }
   requirements:
       _locale:  en|fr
       _format:  html|rss
-      year:     \d+	
+      year:     \d+	   
+  

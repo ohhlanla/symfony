@@ -16,11 +16,14 @@ class BlogController extends Controller
     {
 		$text = $page;
 		
+		if($text==9)
+			
+		{return $this->redirectToRoute('homepage');} // redirect to the "homepage" route
+	
         return $this->render('blog/blog.html.twig', array(
             'number' => $text,
         ));
     }
-
     /**
      * Matches /blog/*
      *
@@ -35,4 +38,5 @@ class BlogController extends Controller
             'number' => $slug,
         ));
     }
+   
 }
