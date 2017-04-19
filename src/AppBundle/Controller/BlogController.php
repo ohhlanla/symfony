@@ -12,7 +12,7 @@ class BlogController extends Controller
      *
      * @Route("/blog/{page}", name="blog_list", requirements={"page": "\d+"})
      */
-    public function listAction($page=1)
+    public function listAction($page)
     {
 		$text = $page;
 		
@@ -37,6 +37,17 @@ class BlogController extends Controller
         return $this->render('blog/blog.html.twig', array(
             'number' => $slug,
         ));
+    }
+	
+	/**
+     * Matches /blog
+     *
+     * @Route("/blog", name="blog_index")
+     */
+    public function indexAction()
+    {
+		
+        return $this->render('blog/index.html.twig');
     }
    
 }

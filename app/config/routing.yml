@@ -4,12 +4,15 @@ app:
 
 blog_list:
     path:      /blog/{page}
-    defaults:  { _controller: AppBundle:Blog:list, page: 1 }
+    defaults:  { _controller: AppBundle:Blog:list}
     requirements:
         page: '\d+'
 blog_show:
     path:      /blog/{slug}
     defaults:  { _controller: AppBundle:Blog:show }
+blog_index:
+    path:      /blog
+    defaults:  { _controller: AppBundle:Blog:index }
 redirect_show:
     path:      /redit
     defaults:  { _controller: AppBundle:Redirect:show }	

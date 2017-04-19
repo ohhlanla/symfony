@@ -7,7 +7,6 @@ $collection = new RouteCollection();
 $collection->add('blog_list', new Route('/blog/{page}', 
 array(
     '_controller' => 'AppBundle:Blog:list',
-	'page'        => 1,
 ),  array(
         'page' => '\d+'
     )
@@ -16,6 +15,10 @@ array(
 
 $collection->add('blog_show', new Route('/blog/{slug}', array(
     '_controller' => 'AppBundle:Blog:show',
+)));
+
+$collection->add('blog_index', new Route('/blog', array(
+    '_controller' => 'AppBundle:Blog:Index',
 )));
 
 $collection->add(
