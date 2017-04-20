@@ -29,4 +29,14 @@ class ArticleController extends Controller
 		                                                        'year' =>$year,
 																'slug' =>$slug));
     }
+	
+	 /**
+     * @Route("/article/{slug}", name="article_slug")
+     */
+    public function slugAction($slug)
+    {
+        return $this->render('article/slug.html.twig',array('slug' =>$slug));
+		//return $this->render('article/recent_list.html.twig');
+		
+    }
 }

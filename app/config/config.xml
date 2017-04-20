@@ -1,0 +1,16 @@
+<!-- app/config/config.xml -->
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:assetic="http://symfony.com/schema/dic/assetic"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services
+        http://symfony.com/schema/dic/services/services-1.0.xsd
+        http://symfony.com/schema/dic/assetic
+        http://symfony.com/schema/dic/assetic/assetic-1.0.xsd">
+
+    <assetic:config debug="%kernel.debug%" use-controller="%kernel.debug%">
+        <assetic:filters cssrewrite="null" />
+    </assetic:config>
+
+    <!-- ... -->
+</container>

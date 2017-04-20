@@ -1,0 +1,17 @@
+{# app/Resources/views/article/slug.html.twig #}
+{% extends 'base.html.twig' %}
+{% block title %}My Article Slug{% endblock %}
+
+{% block body %}
+<h1>You route to article slug <br/></h1>
+
+ Slug   : {{ slug }}
+ 
+<!--<img src="{{ asset('Resources/public/images/Small.jpg') }}" alt="Symfony!" />-->
+
+
+{% image '@AppBundle/Resources/public/images/small.jpg' %}
+    <img src="{{ asset_url }}" alt="Example" />
+{% endimage %} 
+
+{% endblock %}
